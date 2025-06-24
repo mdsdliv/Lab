@@ -250,29 +250,30 @@ using namespace std;
 }
         */
     
-        //Task 6: iterators
-#include <iostream>
+   #include <iostream>
 using namespace std;
 
-double average(const vector<int>& v );
-for(int i =0;i< n ; ++i){
-    int x;
-    cin>>x;
-    v.push_back(x)
+double average(const   ){
+    vector<int>& v;
+    for(int i =0;i< n ; ++i){
+        int x;
+        cin>>x;
+        v.push_back(x);
 }
-int aver,sum =0 ;
-for (auto it = v.begin(); it != v.end(); ++it){
-    aver +=it ;
-    aver = aver / n ;
-    sum+=it;
-    cout << sum << " "<< aver<< endl ; 
+    int aver,sum =0 ;
+    for (auto it = v.begin(); it != v.end(); ++it  ){
+        aver +=*it ;
+        aver = aver / n ;
+        sum+=it;
+        cout << sum << " "<< aver<< endl ; 
 
+}
 }
 
 int main(){
     int n;
     cin>> n;
-    cout << average;
+    cout << average(n);
     return 0; 
     
 }
@@ -280,5 +281,3 @@ int main(){
 
 
 
-
-}
