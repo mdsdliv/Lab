@@ -158,5 +158,127 @@ using namespace std;
 
 
 
+        
+    return 0;
+}
+*/
+
+
+// Task 3: будем работать с map   
+/*
+#include <iostream>
+#include <map>
+#include <sstream>
+
+using namespace std;
+int main(){
+    string input;
+    getline(cin, input);
+    stringstream ss(input);
+    string word;
+    map<string ,int> wordcount;
+    while(ss>> word){
+        wordcount[word]++;
+
+    }
+    for(auto &p : wordcount ){
+        cout<< p.first<< ":" << p.second<< endl;
+    }
+    return 0; 
+
+}
+    */
+// Task 4: про Stack 
+/*
+#include <iostream>
+#include <stack>
+using namespace std; 
+bool isbalanced(string expr){
+    stack<char> st;
+
+    for(char ds: expr){
+        if(ds == '('){
+            st.push(ds);
+    }
+        else if(ds ==')'){
+            if(st.empty()){
+                return false;
+            }
+            st.pop();
+
+
+        }
+    }
+    return st.empty();
+}
+int main(){
+    string input;
+    getline(cin,input);
+    if(isbalanced(input)){
+        cout << " correct! "<<endl;
+    }
+    else{
+        cout<< " Incorrect ! "<< endl ;
+    }
+    return 0;
+}
+    */
+
+//Task 5: working with queue
+/* 
+#include <iostream>
+#include <queue>
+#include <string>
+using namespace std;
+    int main(){
+        queue<string> names;
+        string name;
+        cout << "ВВедите 5 имен: "<<endl;
+        for(int i =0;i<5;i++){
+            cin >> name;
+            names.push(name);
+        } 
+        while(!names.empty()){
+            cout << names.front()<<endl;
+            names.pop();
+        }
+        return 0;
+
+
+
+
+}
+        */
+    
+        //Task 6: iterators
+#include <iostream>
+using namespace std;
+
+double average(const vector<int>& v );
+for(int i =0;i< n ; ++i){
+    int x;
+    cin>>x;
+    v.push_back(x)
+}
+int aver,sum =0 ;
+for (auto it = v.begin(); it != v.end(); ++it){
+    aver +=it ;
+    aver = aver / n ;
+    sum+=it;
+    cout << sum << " "<< aver<< endl ; 
+
+}
+
+int main(){
+    int n;
+    cin>> n;
+    cout << average;
+    return 0; 
+    
+}
+
+
+
+
 
 }
