@@ -1,5 +1,5 @@
 // Task 1 : работа с алгоритмом 
-/*
+
 #include <iostream>
 #include <vector>
 #include <random>
@@ -36,11 +36,11 @@ int main(){
 return 0;
 
 }
-*/
+
 
 
 // Task 2: работа с set  
-/*
+
 #include <iostream>
 #include <set>
 using namespace std;
@@ -74,11 +74,11 @@ using namespace std;
 
     return 0;
 }
-*/
+
 
 
 // Task 3: будем работать с map   
-/*
+
 #include <iostream>
 #include <map>
 #include <sstream>
@@ -100,9 +100,9 @@ int main(){
     return 0; 
 
 }
-    */
+    
 // Task 4: про Stack 
-/*
+
 #include <iostream>
 #include <stack>
 using namespace std; 
@@ -135,97 +135,10 @@ int main(){
     }
     return 0;
 }
-    */
-
-//Task 5: working with queue 
-#include <iostream>
-#include <queue>
-#include <string>
-using namespace std;
-    int main(){
-        queue<string> names;
-        string name;
-        cout << "ВВедите 5 имен: "<<endl;
-        for(int i =0;i<5;i++){
-            cin >> name;
-            names.push(name);
-        } 
-        while(!names.empty()){
-            cout << names.front()<<endl;
-            names.pop();
-        }
-        return 0;
-
-
-
-        
-    return 0;
-}
-*/
-
-
-// Task 3: будем работать с map   
-/*
-#include <iostream>
-#include <map>
-#include <sstream>
-
-using namespace std;
-int main(){
-    string input;
-    getline(cin, input);
-    stringstream ss(input);
-    string word;
-    map<string ,int> wordcount;
-    while(ss>> word){
-        wordcount[word]++;
-
-    }
-    for(auto &p : wordcount ){
-        cout<< p.first<< ":" << p.second<< endl;
-    }
-    return 0; 
-
-}
-    */
-// Task 4: про Stack 
-/*
-#include <iostream>
-#include <stack>
-using namespace std; 
-bool isbalanced(string expr){
-    stack<char> st;
-
-    for(char ds: expr){
-        if(ds == '('){
-            st.push(ds);
-    }
-        else if(ds ==')'){
-            if(st.empty()){
-                return false;
-            }
-            st.pop();
-
-
-        }
-    }
-    return st.empty();
-}
-int main(){
-    string input;
-    getline(cin,input);
-    if(isbalanced(input)){
-        cout << " correct! "<<endl;
-    }
-    else{
-        cout<< " Incorrect ! "<< endl ;
-    }
-    return 0;
-}
-    */
+    
 
 //Task 5: working with queue
-/* 
+ 
 #include <iostream>
 #include <queue>
 #include <string>
@@ -248,35 +161,82 @@ using namespace std;
 
 
 }
-        */
+        
     
-   #include <iostream>
+        //Task 6: iterators
+        
+#include <iostream>
+#include <vector>
 using namespace std;
-
-double average(const   ){
-    vector<int>& v;
-    for(int i =0;i< n ; ++i){
-        int x;
-        cin>>x;
-        v.push_back(x);
-}
+double average (const vector<int>& v){
+   
     int aver,sum =0 ;
-    for (auto it = v.begin(); it != v.end(); ++it  ){
-        aver +=*it ;
-        aver = aver / n ;
-        sum+=it;
-        cout << sum << " "<< aver<< endl ; 
-
-}
+    for (auto it = v.begin(); it != v.end();++it){
+        sum+=*it;
+    }
+    return static_cast<double>(sum) / v.size(); 
 }
 
 int main(){
     int n;
     cin>> n;
-    cout << average(n);
+    vector<int> v;
+    for(int i =0;i< n ; ++i){
+        int x;
+        cin>>x;
+        v.push_back(x);
+}
+    double resault= average(v);
+    cout << resault; 
+
     return 0; 
     
 }
+    
+   // Task 7: STL 
+   #include <iostream>
+   #include <vector> 
+   #include <algorithm>
+   using namespace std; 
+   int main(){
+   vector<int> v;
+   int n; 
+   cin>> n;
+   for(int i=0; i<n; i++){
+    int x;
+    cin >> x; 
+    v.push_back(x);
+   }
+   reverse(v.begin(), v.end());
+    
+  
+   for(int result:v){
+    cout << result<<endl ; 
+       
+   }
+   int count_even  ;
+   count_even =  count_if(v.begin(),v.end(), [](int x){
+    return x %2 ==0;
+   });
+   cout<< "even "<< count_even<< endl;
+   
+   v.erase(remove_if(v.begin(), v.end(),[](int x){
+    return (x %3 ==0 && x%2==0);
+   }) , v.end());
+   cout <<"after remove_if: ";
+   for(int x:v){
+    cout <<x<<" ";
+
+}
+   
+   return 0;
+}
+   
+
+
+
+
+
 
 
 
