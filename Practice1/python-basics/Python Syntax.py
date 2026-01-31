@@ -22,3 +22,8 @@ print("Hello"); print("How are you?"); print("Bye bye!") #not error
 #If you want to print multiple words on the same line, you can use the end parameter:
 print("Hello World!", end=" ")
 print("I will print on the same line.")
+
+#Mix Text and Numbers
+#You can combine text and numbers in one output by separating them with a comma:
+
+print("I am", 35, "years old.")
