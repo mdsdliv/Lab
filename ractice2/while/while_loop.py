@@ -64,3 +64,12 @@ while i > 0:
     print(i)
     i -= 1
 
+
+#9 - total sum 
+y= int(input())
+tot= 0
+i=1 
+while i<=y:
+    tot+=i
+    i+=1
+print(tot)
