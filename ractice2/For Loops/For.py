@@ -109,3 +109,13 @@ for x in adj:
 
 # having an empty for loop like this, would raise an error without the pass statement
 
+
+
+#13
+n = int(input())
+total = 0
+for x in input().split():  # сразу берём все числа в строке
+    total += int(x)        # превращаем в число и добавляем
+print(total)
+
+
