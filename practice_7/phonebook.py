@@ -1,3 +1,47 @@
+import csv
+from connect import connect
+
+def insert_from_csv(file_path):
+    conn = connect()
+    if conn is None:
+        return
+    
+    try:
+        cur = conn.cursor()
+        with open(file_path, 'r') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                cur.execute(
+                    "INSERT INTO contacts (name, phone) VALUES (%s, %s)",
+                    (row[0], row[1])
+                )
+        conn.commit()
+        cur.close()
+        print("Данные из CSV успешно добавлены")
+    except Exception as e:
+        print(f"Ошибка при импорте: {e}")
+    finally:
+        conn.close()
+
+# Вызов функции
+insert_from_csv('contacts.csv')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Создание таблицы (Create Table)
 #Используем VARCHAR для текста и INT для чисел. Поле id SERIAL само нумерует строки.
 
