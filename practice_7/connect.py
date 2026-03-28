@@ -8,7 +8,7 @@ def connect():
             host="localhost",      # или IP сервера
             database="your_db",    # имя твоей базы
             user="postgres",       # твой логин
-            password="123"         # твой пароль
+            password="mdsd"         # твой пароль
         )
         return conn
     except (Exception, psycopg2.DatabaseError) as error:
