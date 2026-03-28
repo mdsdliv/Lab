@@ -6,7 +6,7 @@ def connect():
     try:
         conn = psycopg2.connect(
             host="localhost",      # или IP сервера
-            database="your_db",    # имя твоей базы
+            database="postgres",    # имя твоей базы
             user="postgres",       # твой логин
             password="mdsd"         # твой пароль
         )
