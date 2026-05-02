@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Ali",
+    "email": "ali@gmail.com",
+    "birthday": "2000-05-12",
+    "group": "Friend",
+    "phones": [
+      {"phone": "87001234567", "type": "mobile"}
+    ]
+  },
+  {
+    "name": "Dana",
+    "email": "dana@mail.com",
+    "birthday": "1999-11-20",
+    "group": "Work",
+    "phones": [
+      {"phone": "87007654321", "type": "work"}
+    ]
+  },
+  {
+    "name": "Aruzhan",
+    "email": "aruzhan@gmail.com",
+    "birthday": "2001-03-01",
+    "group": "Family",
+    "phones": [
+      {"phone": "87005555555", "type": "home"}
+    ]
+  }
+]
